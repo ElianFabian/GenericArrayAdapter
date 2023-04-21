@@ -68,7 +68,7 @@ fun SomeArrayAdapter(context: Context) = GenericArrayAdapter(
 			onBindDropDownView = { item: ItemTwo, binding ->
 
 			},
-		)
+		),
 	),
 )
 

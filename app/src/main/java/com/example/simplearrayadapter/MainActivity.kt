@@ -1,21 +1,16 @@
-package com.example.genericarrayadapter
+package com.example.simplearrayadapter
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.genericarrayadapter.adapter.TextArrayAdapter
-import com.example.genericarrayadapter.adapter_example.PhoneCodeArrayAdapter
-import com.example.genericarrayadapter.adapter_example.PhoneCodeArrayAdapter2
-import com.example.genericarrayadapter.databinding.ActivityMainBinding
-import com.example.genericarrayadapter.databinding.ItemPhoneCodeBinding
-import com.example.genericarrayadapter.model.PhoneCodeInfo
+import com.example.simplearrayadapter.adapter_example.PhoneCodeArrayAdapter2
+import com.example.simplearrayadapter.databinding.ActivityMainBinding
+import com.example.simplearrayadapter.model.PhoneCodeInfo
 
-class MainActivity : AppCompatActivity()
-{
+class MainActivity : AppCompatActivity() {
 	private lateinit var binding: ActivityMainBinding
 
 
-	override fun onCreate(savedInstanceState: Bundle?)
-	{
+	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
 
 		binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,8 +21,7 @@ class MainActivity : AppCompatActivity()
 	}
 
 
-	private fun initUi()
-	{
+	private fun initUi() {
 		binding.spinner.adapter = PhoneCodeArrayAdapter2(applicationContext).apply()
 		{
 			addAll(phoneCodeInfoList)
